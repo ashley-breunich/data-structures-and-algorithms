@@ -1,3 +1,5 @@
+[![Build Status](https://www.travis-ci.com/ashley-breunich/data-structures-and-algorithms.svg?branch=array_binary_search)](https://www.travis-ci.com/ashley-breunich/data-structures-and-algorithms)
+
 # Insert & Shift an Array in Middle Index
 I worked with Hai Le on this challenge. 
 
