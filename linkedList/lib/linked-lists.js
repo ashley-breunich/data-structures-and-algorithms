@@ -85,6 +85,27 @@ class LinkedList {
     }
   }
 
+  kthFromEnd(k) {
+    
+    console.log('value of k:', k);
+    let length = 0;
+    let current = this.head;
+    let arr = [];
+    
+    while(current){
+      arr.push(current.value);
+      current = current.next;
+      length++;
+    }
+    
+    console.log('length:', length); 
+    console.log('arr:', arr);  
+    let newIndex = (length - 1) - k;
+    console.log('new index:', newIndex);
+    console.log('correct answer:', arr[newIndex]);
+    return arr[newIndex];
+  }
+
   length() {
     let length = 0;
     let current = this.head;
