@@ -69,7 +69,6 @@ describe('Insert Before', () => {
     list.append('green');
     list.append('yellow');
     list.insertBefore('blue', 'pink');
-    console.log(list);
     expect(list.head.value).toBe('pink');
     expect(list.head.next.value).toBe('blue');
     expect(list.head.next.next.value).toBe('green');
@@ -82,7 +81,6 @@ describe('Insert Before', () => {
     list.append('green');
     list.append('yellow');
     list.insertBefore('yellow', 'pink');
-    console.log(list);
     expect(list.head.value).toBe('blue');
     expect(list.head.next.value).toBe('green');
     expect(list.head.next.next.value).toBe('pink');
@@ -118,6 +116,20 @@ describe('Insert After', () => {
     expect(list.head.next.next.next.next.value).toBe('pink');
   });
 });
+
+// describe('Kth from End', () => {
+
+//   it('kthFromEnd(k) will return value of linked list ', ()=> {
+//     let list = new LL();
+//     list.append('Owl');
+//     list.append('Dog');
+//     list.append('Llama');
+//     list.append('Fox');
+//     list.kthFromEnd(1);
+//     console.log(list);
+//     expect(list.kthFromEnd()).toEqual('Llama');
+//   });
+// });
 
 describe('length of node', function(){
   it('length should be 0 for an empty list', () => {
