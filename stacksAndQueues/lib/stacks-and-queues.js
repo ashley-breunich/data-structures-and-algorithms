@@ -18,8 +18,12 @@ class Stack {
   pop() {
     let poppedItem = this.storage.deleteFromEnd();
     this.top = this.storage.tail;
-    console.log('POPPED ITEM', poppedItem);
     return poppedItem;
+  }
+
+  peek() {
+    let lastItem = this.storage.getLastValue();
+    return lastItem;
   }
 }
 

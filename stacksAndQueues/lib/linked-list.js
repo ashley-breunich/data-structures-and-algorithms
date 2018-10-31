@@ -48,7 +48,15 @@ class LinkedList {
     current = previous;
     current.next = null;
     this.tail = previous;
-    console.log('THIS.TAIL',this.tail);
+    return current;
+  }
+
+  getLastValue() {
+    let current = this.head;
+    
+    while(current.next) {
+      current = current.next;
+    }
     return current;
   }
 

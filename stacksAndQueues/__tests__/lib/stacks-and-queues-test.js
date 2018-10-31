@@ -20,7 +20,6 @@ describe('Push', () => {
     expect(stack.top.value).toBe(3);  
     stack.push(4); 
     expect(stack.top.value).toBe(4);
-    console.log('PUSH STACK', stack);
   });
 });
 
@@ -37,6 +36,22 @@ describe('Pop', () => {
     expect(stack.top.value).toBe(4);
     stack.pop();
     expect(stack.top.value).toBe(3);
-    console.log('POP STACK', stack);
+  });
+});
+
+describe('Peek', () => {
+  it('The stacks peek() function will return the top value', ()=> {
+    let stack = new stacksQueues();
+    stack.push(1);
+    expect(stack.top.value).toBe(1);
+    stack.push(2);  
+    expect(stack.top.value).toBe(2);
+    stack.push(3);  
+    expect(stack.top.value).toBe(3);  
+    stack.push(4); 
+    expect(stack.top.value).toBe(4);
+    stack.peek();
+    expect(stack.top.value).toBe(4);
+    console.log('PEEK STACK', stack);
   });
 });
