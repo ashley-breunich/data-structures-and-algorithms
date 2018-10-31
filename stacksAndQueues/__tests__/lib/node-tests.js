@@ -9,7 +9,6 @@ describe('Node Module', () => {
     let node = new Node(value);
     expect(node.value).toEqual(value);
     expect(node.next).toBeNull();
-    console.log(node);
   });
 
 });
