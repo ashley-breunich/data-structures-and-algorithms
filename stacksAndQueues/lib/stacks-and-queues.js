@@ -12,6 +12,14 @@ class Stack {
   push(value) {
     this.storage.append(value);
     this.top = new Node(value);
+    return this;
+  }
+
+  pop() {
+    let poppedItem = this.storage.deleteFromEnd();
+    this.top = this.storage.tail;
+    console.log('POPPED ITEM', poppedItem);
+    return poppedItem;
   }
 }
 

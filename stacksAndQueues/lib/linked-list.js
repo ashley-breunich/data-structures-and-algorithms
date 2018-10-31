@@ -38,6 +38,20 @@ class LinkedList {
     this.head = node; 
   }
 
+  deleteFromEnd() {    
+    let current = this.head;
+    let previous = null;
+    while(current.next) {
+      previous = current;
+      current = current.next;
+    }
+    current = previous;
+    current.next = null;
+    this.tail = previous;
+    console.log('THIS.TAIL',this.tail);
+    return current;
+  }
+
   // insertBefore
   insertBefore(value, newValue) {
     let node = new Node(newValue);
