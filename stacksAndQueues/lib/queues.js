@@ -9,10 +9,20 @@ class Queue {
     this.storage = new LL();
   }
   
-  enqueue (value) {
+  enqueue(value) {
     this.storage.prepend(value);
     this.front = new Node(value);
     return this;
+  }
+  
+  dequeue() {
+    let dequeuedItem = this.storage.deleteFromFront();
+    this.front = this.storage.head;
+    return dequeuedItem;
+  }
+
+  peek() {
+
   }
 }
   

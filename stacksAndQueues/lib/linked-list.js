@@ -9,7 +9,6 @@ class LinkedList {
     this.tail = null;
   }
 
-  // This is like the push value
   append(value) {
     let node = new Node(value);
     if (!this.head) {
@@ -41,14 +40,29 @@ class LinkedList {
   deleteFromEnd() {    
     let current = this.head;
     let previous = null;
+
+    if (!this.head) {
+      return 'This Linked List is empty';
+    }
+
     while(current.next) {
       previous = current;
       current = current.next;
     }
+
     current = previous;
     current.next = null;
     this.tail = previous;
     return current;
+  }
+
+  deleteFromFront() {
+    if (!this.head) {
+      return 'This Linked List is empty';
+    }
+    let previous = this.head;
+    this.head = this.head.next;
+    return previous;
   }
 
   getLastValue() {
@@ -60,7 +74,6 @@ class LinkedList {
     return current;
   }
 
-  // insertBefore
   insertBefore(value, newValue) {
     let node = new Node(newValue);
     let current = this.head;

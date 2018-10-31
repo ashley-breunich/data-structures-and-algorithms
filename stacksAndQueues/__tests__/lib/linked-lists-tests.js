@@ -40,6 +40,18 @@ describe('Delete from End', () => {
 
 });
 
+describe('Delete from Front', () => {
+  it('deleteFromFront() will delete the front node from the linked list', ()=> {
+    let list = new LL();
+    list.append(1);
+    list.append(2);
+    list.append(3);
+    list.deleteFromFront();
+    expect(list.head.value).toBe(2);
+  });
+
+});
+
 describe('Get Last Value', () => {
   it('getLastValue() will get the last value from the linked list', ()=> {
     let list = new LL();

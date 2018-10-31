@@ -64,7 +64,7 @@ describe('Queue', () => {
 });
 
 describe('Enqueue', () => {
-  it('The stacks push() function will add a new item to the top of the stack', ()=> {
+  it('The queue enqueue() function will add a new item to the front of the queue', ()=> {
     let queue = new Queue();
     queue.enqueue(4);
     expect(queue.front.value).toBe(4);
@@ -74,6 +74,23 @@ describe('Enqueue', () => {
     expect(queue.front.value).toBe(2);
     queue.enqueue(1);
     expect(queue.front.value).toBe(1);
-    console.log(queue);
+  });
+});
+
+describe('Dequeue', () => {
+  it('The queue dequeue() function will delete the front item of the queue', ()=> {
+    let queue = new Queue();
+    queue.enqueue(4);
+    expect(queue.front.value).toBe(4);
+    queue.enqueue(3);
+    expect(queue.front.value).toBe(3);
+    queue.enqueue(2);
+    expect(queue.front.value).toBe(2);
+    queue.enqueue(1);
+    expect(queue.front.value).toBe(1);
+    queue.dequeue();
+    queue.dequeue();
+    console.log('DEQUEUE', queue);
+    expect(queue.front.value).toBe(3);
   });
 });
