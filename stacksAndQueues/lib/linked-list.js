@@ -74,6 +74,14 @@ class LinkedList {
     return current;
   }
 
+  getFirstValue() {
+    if (!this.head) {
+      return 'This Linked List is empty';
+    }
+    
+    return this.head;
+  }
+
   insertBefore(value, newValue) {
     let node = new Node(newValue);
     let current = this.head;

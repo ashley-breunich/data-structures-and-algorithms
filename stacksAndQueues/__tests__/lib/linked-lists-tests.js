@@ -64,3 +64,16 @@ describe('Get Last Value', () => {
   });
 
 });
+
+describe('Get First Value', () => {
+  it('getFirstValue() will get the first value from the linked list', ()=> {
+    let list = new LL();
+    list.append(1);
+    list.append(2);
+    list.append(3);
+    list.append(4);
+    list.getFirstValue();
+    expect(list.head.value).toBe(1);
+  });
+
+});

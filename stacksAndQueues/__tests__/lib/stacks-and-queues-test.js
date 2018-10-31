@@ -40,7 +40,7 @@ describe('Pop', () => {
   });
 });
 
-describe('Peek', () => {
+describe('Peek - Stacks', () => {
   it('The stacks peek() function will return the top value', ()=> {
     let stack = new Stacks();
     stack.push(1);
@@ -51,8 +51,8 @@ describe('Peek', () => {
     expect(stack.top.value).toBe(3);  
     stack.push(4); 
     expect(stack.top.value).toBe(4);
-    stack.peek();
-    expect(stack.top.value).toBe(4);
+    let stackpeek = stack.peek();
+    expect(stackpeek.value).toBe(4);
   });
 });
 
@@ -90,7 +90,22 @@ describe('Dequeue', () => {
     expect(queue.front.value).toBe(1);
     queue.dequeue();
     queue.dequeue();
-    console.log('DEQUEUE', queue);
     expect(queue.front.value).toBe(3);
+  });
+});
+
+describe('Peek - Queue', () => {
+  it('The queue peek() function will return the front item of the queue', ()=> {
+    let queue = new Queue();
+    queue.enqueue(4);
+    expect(queue.front.value).toBe(4);
+    queue.enqueue(3);
+    expect(queue.front.value).toBe(3);
+    queue.enqueue(2);
+    expect(queue.front.value).toBe(2);
+    queue.enqueue(1);
+    expect(queue.front.value).toBe(1);
+    let queuepeek = queue.peek();
+    expect(queuepeek.value).toEqual(1);
   });
 });

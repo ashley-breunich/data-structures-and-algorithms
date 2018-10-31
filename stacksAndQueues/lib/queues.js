@@ -22,7 +22,9 @@ class Queue {
   }
 
   peek() {
-
+    let firstItem = this.storage.getFirstValue();
+    console.log(firstItem);
+    return firstItem;
   }
 }
   
