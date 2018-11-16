@@ -1,12 +1,7 @@
 'use strict';
 
-class Node {
-  constructor(val) {
-    this.value = val;
-    this.left = null;
-    this.right = null;
-  }
-}
+const node = require('./node.js');
+console.log(node);
 
 class BinaryTree {
   constructor(root = null) {
