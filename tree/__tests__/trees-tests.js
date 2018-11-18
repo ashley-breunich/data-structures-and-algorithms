@@ -20,8 +20,7 @@ three.left = six;
 three.right = seven;
 
 let tree = new BinaryTree(one);
-let searchTree = new BinarySearchTree(new Node (40));
-console.log('search tree', searchTree);
+
 describe('Node Module', () => {
 
   it('This constuctor should be able to create a new Node module when there is one value passed through.', () => {
@@ -34,38 +33,64 @@ describe('Node Module', () => {
 
 describe('Binary Tree', () => {
 
-  it('preOrder()', () => {
+  it('Can perform a preOrder traversal', () => {
     let preOrderTraversal = tree.preOrder();
     // console.log('preorder traversal', preOrderTraversal);
     expect(preOrderTraversal).toEqual([1, 2, 4, 5, 3, 6, 7]);
   });
 
-  it('inOrder()', () => {
+  it('Can perform an inOrder traversal', () => {
     let inOrderTraversal = tree.inOrder();
     // console.log('inorder traversal', inOrderTraversal);
     expect(inOrderTraversal).toEqual([ 4, 2, 5, 1, 6, 3, 7 ]);
   });
 
-  it('postOrder()', () => {
+  it('Can perform a postOrder traversal', () => {
     let postOrderTraversal = tree.postOrder();
     // console.log('postorder traversal', postOrderTraversal);
     expect(postOrderTraversal).toEqual([ 4, 5, 2, 6, 7, 3, 1 ]);
   });
 
-  it('levelOrder()', () => {
+  it('Can perform a levelOrder traversal', () => {
     let levelOrderTraversal = tree.levelOrder();
-    console.log('levelorder traversal', levelOrderTraversal);
+    // console.log('levelorder traversal', levelOrderTraversal);
     expect(levelOrderTraversal).toEqual([ 1, 2, 3, 4, 5, 6, 7 ]);
   });
   
 });
 
-// describe('Binary Search Tree', () => {
 
-//   it('add()', () => {
-//     let addBinary = searchTree.add(22);
-//     console.log('add binary search tree', addBinary);
-//     expect(addBinary).toEqual([1, 2, 4, 5, 3, 6, 7]);
+let searchTree = new BinarySearchTree();
+searchTree.add(9);
+searchTree.add(4);
+searchTree.add(17);
+searchTree.add(3);
+searchTree.add(6);
+searchTree.add(5);
+searchTree.add(7);
+searchTree.add(20);
+
+// console.log('search tree', searchTree);
+
+describe('Binary Search Tree', () => {
+
+  it('The root will be the first value entered', () => {
+    expect(searchTree.root.value).toEqual(9);
+  });
+
+  it('It can count the number of nodes in the tree', () => {
+    expect(searchTree.length).toEqual(8);
+  });
+
+//   it('Can add a new node to a binary search tree in the correct spot', () => {
+//     let addNode = searchTree.add(22);
+//     console.log('searchTree', searchTree);
+//     expect(addNode).toEqual([9, 4, 17, 3, 6, 22, 5, 7, 20]);
 //   });
+
+  it('It can find a given node in a binary search tree', () => {
+    let findNode = searchTree.search(17);
+    expect(findNode.value).toEqual(17);
+  });
     
-// });
+});

@@ -38,3 +38,6 @@ Postorder() accepts a tree and returns an array of results, in the order of the 
 The BinarySearchTree Class construtor sets the root to null.
 
 Add() accepts a value (not restricted to any data type) and adds the value to the tree in the correct spot. 
+
+## Reference
+I used [this](https://stackoverflow.com/questions/37292620/how-to-find-value-is-present-in-binary-tree-or-not) Stack Overflow thread to help me with my binary search tree SEARCH function.

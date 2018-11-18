@@ -85,7 +85,3 @@ class BinaryTree {
 }
 
 module.exports = BinaryTree;
-
-// let tree = new BinaryTree();
-// let values = [9, 4, 17, 3, 6, 22, 5, 7, 20];
-// values.map(val => tree.insert(val));
