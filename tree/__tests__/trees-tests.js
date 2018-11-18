@@ -21,8 +21,6 @@ three.right = seven;
 
 let tree = new BinaryTree(one);
 
-// console.log('tree', tree);
-
 describe('Node Module', () => {
 
   it('This constuctor should be able to create a new Node module when there is one value passed through.', () => {
@@ -38,7 +36,19 @@ describe('Binary Tree', () => {
   it('preOrder()', () => {
     let preOrderTraversal = tree.preOrder();
     console.log('preorder traversal', preOrderTraversal);
-    // expect(node.value).toEqual(val);
+    expect(preOrderTraversal).toEqual([1, 2, 4, 5, 3, 6, 7]);
+  });
+
+  it('inOrder()', () => {
+    let inOrderTraversal = tree.inOrder();
+    console.log('inorder traversal', inOrderTraversal);
+    expect(inOrderTraversal).toEqual([ 4, 2, 5, 1, 6, 3, 7 ]);
+  });
+
+  it('postOrder()', () => {
+    let postOrderTraversal = tree.postOrder();
+    console.log('postorder traversal', postOrderTraversal);
+    expect(postOrderTraversal).toEqual([ 4, 5, 2, 6, 7, 3, 1 ]);
   });
   
 });
