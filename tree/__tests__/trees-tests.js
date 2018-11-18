@@ -82,11 +82,11 @@ describe('Binary Search Tree', () => {
     expect(searchTree.length).toEqual(8);
   });
 
-//   it('Can add a new node to a binary search tree in the correct spot', () => {
-//     let addNode = searchTree.add(22);
-//     console.log('searchTree', searchTree);
-//     expect(addNode).toEqual([9, 4, 17, 3, 6, 22, 5, 7, 20]);
-//   });
+  //   it('Can add a new node to a binary search tree in the correct spot', () => {
+  //     let addNode = searchTree.add(22);
+  //     console.log('searchTree', searchTree);
+  //     expect(addNode).toEqual([9, 4, 17, 3, 6, 22, 5, 7, 20]);
+  //   });
 
   it('It can find a given node in a binary search tree', () => {
     let findNode = searchTree.search(17);
