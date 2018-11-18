@@ -1,7 +1,6 @@
 'use strict';
 
-const node = require('./node.js');
-console.log(node);
+const Node = require('./node.js');
 
 class BinarySearchTree {
   constructor(root = null) {

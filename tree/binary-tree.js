@@ -63,6 +63,25 @@ class BinaryTree {
 
     return results;
   }
+
+  levelOrder() {
+    let results = [];
+    let nodeQueue = [];
+  
+    nodeQueue.push(this.root);
+  
+    while (nodeQueue.length) {
+      let current = nodeQueue.shift();
+      results.push(current.value);
+      if (current.left) {
+        nodeQueue.push(current.left);
+      }
+      if (current.right) {
+        nodeQueue.push(current.right);
+      }
+    }
+    return results;
+  }
 }
 
 module.exports = BinaryTree;
