@@ -51,10 +51,9 @@ describe('Binary Tree', () => {
     expect(postOrderTraversal).toEqual([ 4, 5, 2, 6, 7, 3, 1 ]);
   });
 
-  it('Can perform a levelOrder traversal', () => {
-    let levelOrderTraversal = tree.levelOrder();
-    // console.log('levelorder traversal', levelOrderTraversal);
-    expect(levelOrderTraversal).toEqual([ 1, 2, 3, 4, 5, 6, 7 ]);
+  it('Can perform a breadthFirst traversal', () => {
+    let BreadthFirstTraversal = tree.breadthFirst();
+    expect(BreadthFirstTraversal).toEqual([ 1, 2, 3, 4, 5, 6, 7 ]);
   });
   
 });
