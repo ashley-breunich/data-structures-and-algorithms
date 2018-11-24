@@ -46,7 +46,7 @@ I used [this](https://stackoverflow.com/questions/37292620/how-to-find-value-is-
 
 
 # Breadth-first
-I worked with Ed & Hollie on this challenge. 
+I worked on this whiteboard challenge with Ed & Hollie.
 
 ## Challenge
 Write a breadth first traversal method which takes a Binary Tree as its unique input. Without utilizing any of the built-in methods available to your language, traverse the input tree using a Breadth-first approach; print every visited node’s value.
