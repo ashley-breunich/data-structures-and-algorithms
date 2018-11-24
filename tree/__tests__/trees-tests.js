@@ -55,6 +55,29 @@ describe('Binary Tree', () => {
     let BreadthFirstTraversal = tree.breadthFirst();
     expect(BreadthFirstTraversal).toEqual([ 1, 2, 3, 4, 5, 6, 7 ]);
   });
+
+  it('It can find that maximum value of a tree', () => {
+
+    let one = new Node (33);
+    let two = new Node (17);
+    let three = new Node (301);
+    let four = new Node (42);
+    let five = new Node (15);
+    let six = new Node (22);
+    let seven = new Node (28);
+    
+    one.left = two;
+    one.right = three;
+    two.left = four;
+    two.right = five;
+    three.left = six;
+    three.right = seven;
+    
+    let maxTree = new BinaryTree(one);
+
+    let maxTreeValue = maxTree.findMaxValue();
+    expect(maxTreeValue).toEqual(301);
+  });
   
 });
 
