@@ -59,3 +59,18 @@ O(w), with “w” being the largest width of the tree.
 
 ## Solution
 ![White Board Solution](assets/breadth-first-traversal.jpg)
+
+# Find the Maximum Value in a Binary Tree
+I worked on this whiteboard challenge with Ed & Hollie.
+
+## Challenge
+Write a function called find-maximum-value which takes binary tree as its only input. Without utilizing any of the built-in methods available to your language, return the maximum value stored in the tree. You can assume that the values stored in the Binary Tree will be numeric.
+
+## Approach & Efficiency
+##### Big O Time 
+O(n)
+##### The Big O Space
+O(w), with “w” being the largest width of the tree.
+
+## Solution
+![White Board Solution](assets/find-maximum-value-binary-tree.jpg)
