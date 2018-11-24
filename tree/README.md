@@ -52,7 +52,10 @@ I worked with Ed & Hollie on this challenge.
 Write a breadth first traversal method which takes a Binary Tree as its unique input. Without utilizing any of the built-in methods available to your language, traverse the input tree using a Breadth-first approach; print every visited node’s value.
 
 ## Approach & Efficiency
-<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+##### Big O Time 
+O(n)
+##### The Big O Space
+O(w), with “w” being the largest width of the tree.
 
 ## Solution
-<!-- Embedded whiteboard image -->
+![White Board Solution](assets/breadth-first-traversal.jpg)
