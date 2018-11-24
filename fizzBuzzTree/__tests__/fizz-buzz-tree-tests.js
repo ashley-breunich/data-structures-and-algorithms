@@ -12,7 +12,6 @@ describe('Node Module', () => {
   });
 });
 
-
 describe('Fizz Buzz Tree', () => {
 
   it('Fizz Buzz function should properly replace values with Fizz, Buzz and FizzBuzz', () => {
