@@ -64,7 +64,7 @@ class BinaryTree {
     return results;
   }
 
-  levelOrder() {
+  breadthFirst() {
     let results = [];
     let nodeQueue = [];
   

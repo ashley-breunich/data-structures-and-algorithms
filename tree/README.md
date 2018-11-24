@@ -43,3 +43,16 @@ Search() accepts a value and looks for that value in the tree and returns the no
 
 ## Reference
 I used [this](https://stackoverflow.com/questions/37292620/how-to-find-value-is-present-in-binary-tree-or-not) Stack Overflow thread to help me with my binary search tree SEARCH function.
+
+
+# Breadth-first
+I worked with Ed & Hollie on this challenge. 
+
+## Challenge
+Write a breadth first traversal method which takes a Binary Tree as its unique input. Without utilizing any of the built-in methods available to your language, traverse the input tree using a Breadth-first approach; print every visited node’s value.
+
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+
+## Solution
+<!-- Embedded whiteboard image -->
