@@ -117,44 +117,38 @@ describe('Insert After', () => {
   });
 });
 
-// describe('Merged Linked List', () => {
+describe('Kth from End', () => {
 
-//   it('mergeLists() will merge together two linked listed', ()=> {
-//     let ll1 = new LL();
-//     ll1.append(1);
-//     ll1.append(2);
-//     ll1.append(3);
-//     console.log('ll1',ll1);
-//     let ll2 = new LL();
-//     ll2.append(5);
-//     ll2.append(6);
-//     ll2.append(7);
-//     console.log('ll2', ll2);
-//     let ll3 = new LL();
-//     console.log('ll3', ll3);
-//     ll3.mergeLists(ll1,ll2);
-//     expect(ll3.head.value).toBe(1);
-//     expect(ll3.head.next.value).toBe(5);
-//     expect(ll3.head.next.next.value).toBe(2);
-//     expect(ll3.head.next.next.next.next.value).toBe(6);
-//     expect(ll3.head.next.next.next.next.next.value).toBe(3);
-//     expect(ll3.head.next.next.next.next.next.next.value).toBe(7);
-//   });
+  it('kthFromEnd(k) will return value of linked list ', ()=> {
+    let list = new LL();
+    list.append(1);
+    list.append(2);
+    list.append(3);
+    list.append(4);
+    list.append(5);
+    list.append(6);
+    list.append(7);
+    let kthValue = list.kthFromEnd(3);
+    expect(kthValue).toBe(4);
+  });
+});
 
-// });
-// describe('Kth from End', () => {
+describe('Reverse', () => {
 
-//   it('kthFromEnd(k) will return value of linked list ', ()=> {
-//     let list = new LL();
-//     list.append('Owl');
-//     list.append('Dog');
-//     list.append('Llama');
-//     list.append('Fox');
-//     list.kthFromEnd(1);
-//     console.log(list);
-//     expect(list.kthFromEnd()).toEqual('Llama');
-//   });
-// });
+  it('reverse() will reverse an array', ()=> {
+    let list = new LL();
+    list.append(1);
+    list.append(2);
+    list.append(3);
+    list.append(4);
+    list.reverse();
+    console.log('list', list);
+    expect(list.head.value).toBe(4);
+    expect(list.head.next.value).toBe(3);
+    expect(list.head.next.next.value).toBe(2);
+    expect(list.head.next.next.next.value).toBe(1);  
+  });
+});
 
 describe('length of node', function(){
   it('length should be 0 for an empty list', () => {

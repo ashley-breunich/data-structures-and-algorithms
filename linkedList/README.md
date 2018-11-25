@@ -1,4 +1,4 @@
-[![Build Status](https://www.travis-ci.com/ashley-breunich/data-structures-and-algorithms.svg?branch=ll_insertions)](https://www.travis-ci.com/ashley-breunich/data-structures-and-algorithms)
+[![Build Status](https://www.travis-ci.com/ashley-breunich/data-structures-and-algorithms.svg?branch=master)](https://www.travis-ci.com/ashley-breunich/data-structures-and-algorithms)
 
 # Linked List Insertions
 My partner was not here this week so I worked on this whiteboarding assingment by myself. Kevin helped me with the insert before function as I was having trouble with that one. Also, Hai helped me finish up my insert after function when I was whiteboarding. Big thank you to them as I was stuck on these for a bit!

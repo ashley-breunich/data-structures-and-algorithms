@@ -85,56 +85,18 @@ class LinkedList {
     }
   }
 
-  kthFromEnd(k) {
-    
-    console.log('value of k:', k);
-    let length = 0;
-    let current = this.head;
-    let arr = [];
-    
-    while(current){
-      arr.push(current.value);
-      current = current.next;
-      length++;
+  kthFromEnd(n) {
+    let offset = this.head;
+    let nBehind = this.head;
+    for (let i = 1; i <= n; i++) {
+      offset = offset.next;
     }
-    
-    console.log('length:', length); 
-    console.log('arr:', arr);  
-    let newIndex = (length - 1) - k;
-    console.log('new index:', newIndex);
-    console.log('correct answer:', arr[newIndex]);
-    return arr[newIndex];
-  }
-
-  mergeLists(ll1,ll2) {
-    if (ll1 == null) return ll2;
-    if (ll2 == null) return ll1;
-
-    let ll3 = new LinkedList();
-    let current1 = ll1.head;
-    let current2 = ll2.head;
-    let node1 = new Node(current1.value);
-    console.log('node1', node1);
-    let node2 = new Node(current2.value);
-    console.log('node2', node2);
-
-    while(current1 || current2) {
-      if (current1 != null && current2 != null) {
-        ll3.append(node1);
-        current1 = current1.next;
-        console.log('current1 next', current1);
-        ll3.append(node2);
-        current2 = current2.next;
-        console.log('current2 next', current2);
-      } else if (current1 == null) {
-        ll3.append(node2);
-        current2 = current2.next;
-      } else {
-        ll3.append(node1);
-        current1 = current1.next;
-      }
+    console.log('offset', offset);
+    while(offset.next) {
+      offset = offset.next;
+      nBehind = nBehind.next;
     }
-    console.log('ll3 final', ll3);
+    return nBehind.value;
   }
 
   reverse() {
@@ -142,7 +104,7 @@ class LinkedList {
     let next = null;
     let previous = null;
   
-    while(current) {
+    while(current !== null) {
       next = current.next;
       current.next = previous;
       previous = current;
