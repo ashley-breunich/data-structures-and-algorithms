@@ -2,6 +2,13 @@
 
 const codeChallenge = require('../left-join.js');
 
+// var hashMap=function(){
+// this.hashDict={};//dictionary
+// this.size=0;
+// this.debug=true;
+// return this;
+// }
+
 let myMap1 = new Map();
 myMap1.set('fond', 'enamored');
 myMap1.set('wrath', 'anger');
