@@ -14,4 +14,4 @@ Time - 0(n)
 Space - 0(n)
 
 ## Solution
-![White Board Solution](assets/left-join.jpg)
+![White Board Solution](assets/left_join.jpg)
