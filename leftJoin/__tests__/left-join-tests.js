@@ -25,9 +25,9 @@ myMap2.set('flow', 'jam');
 
 describe('Left Join', () => {
 
-  it('it will left join two hashmaps', () => {
-    let message = codeChallenge.leftjoins(myMap1, myMap2);
-    expect(message).toEqual('a');
+  it('it will left-join two hashmaps', () => {
+    let hashmap = codeChallenge.leftjoins(myMap1, myMap2);
+    expect(hashmap).toEqual({'diligent': ['employed', 'idle'], 'fond': ['enamored', 'averse'], 'guide': ['usher', 'follow'], 'outfit': ['garb', null], 'wrath': ['anger', 'delight']});
   });
 
 });
