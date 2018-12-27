@@ -58,7 +58,7 @@ class Hashmap {
       }
       current = current.next;
     } 
-    return 'There is no value matching the current given key.';
+    return false;
   }
 
   getHash(key) {
