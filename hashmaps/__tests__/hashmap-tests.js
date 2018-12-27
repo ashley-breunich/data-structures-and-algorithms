@@ -34,18 +34,28 @@ describe('Hashmap Data Structure', () => {
   });
 
   it('will let you know if there is not a matching key/value pair', ()=> {
-    let findTest = myhash.find('Tucket');
+    let findTest = myhash.find('Tucker');
     expect(findTest).toEqual('There is no value matching the current given key.');
   });
 
   it('If it finds a specific key, it will return true', ()=> {
-    let keyTest = myhash.contains('Cat');
-    expect(keyTest).toEqual(true);
+    let containsTest = myhash.contains('Cat');
+    expect(containsTest).toEqual(true);
   });
 
   it('If it finds that a specific key does not exist in the map, it will return false', ()=> {
-    let keyTest = myhash.contains('Kaitlyn');
-    expect(keyTest).toEqual(false);
+    let containsTest = myhash.contains('Kaitlyn');
+    expect(containsTest).toEqual(false);
+  });
+
+  it('When given a key, it will return the index in the array the key is stored', ()=> {
+    let getHashTest = myhash.getHash('Ben');
+    expect(getHashTest).toEqual(17);
+  });
+
+  it('When given a key that does not exist in the hashmap, it will return an message saying there is no matching key in the map', ()=> {
+    let getHashTest = myhash.getHash('Ponyo');
+    expect(getHashTest).toEqual('There is no matching key in the map');
   });
 
 });

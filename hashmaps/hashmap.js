@@ -1,6 +1,6 @@
 'use strict';
 
-const util = require('util');
+// const util = require('util');
 const LL = require('./linked-list.js');
 
 class Hashmap {
@@ -31,7 +31,6 @@ class Hashmap {
 
   find(key) {
     let hash = this.hash(key);
-    // console.log('hash', hash);
     let bucket = this.map[hash];
     if (bucket === undefined) {
       return 'There is no value matching the current given key.';
@@ -43,13 +42,12 @@ class Hashmap {
       }
       current = current.next;
     } 
+    return 'There is no value matching the current given key.';
   }
 
   contains(key) {
     let hash = this.hash(key);
-    console.log('hash', hash);
     let bucket = this.map[hash];
-    console.log('bucket contains key', bucket);
     if (bucket === undefined) {
       return false;
     }
@@ -60,6 +58,24 @@ class Hashmap {
       }
       current = current.next;
     } 
+    return 'There is no value matching the current given key.';
+  }
+
+  getHash(key) {
+    let hash = this.hash(key);
+    let bucket = this.map[hash];
+    if (bucket === undefined) {
+      return 'There is no matching key in the map';
+    }
+
+    let current = bucket.head;
+    while (current !== null) {
+      if (current.value.key === key) {
+        return hash;
+      }
+      current = current.next;
+    }
+    return 'There is no matching key in the map';
   }
 }
 
