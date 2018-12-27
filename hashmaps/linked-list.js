@@ -7,6 +7,7 @@ class LinkedList {
   constructor() {
     this.head = null;
     this.tail = null;
+    this.length = 0;
   }
 
   traversal() {
@@ -32,12 +33,14 @@ class LinkedList {
     if (!this.head) {
       this.head = node;
       this.tail = node;
+      this.length++;
       return this; 
     }
     
     let current = this.head;
     while(current.next) {
       current = current.next;
+      this.length++;
     }
     
     current.next = node;
@@ -48,6 +51,7 @@ class LinkedList {
   prepend(value) {
     let node = new Node(value);
     node.next =this.head;
+    this.length++;
     this.head = node;
   }
 
@@ -69,6 +73,7 @@ class LinkedList {
     lastValue = current.next;
     current.next = null;
     this.tail = current;
+    this.length--;
     return lastValue;
   }
 

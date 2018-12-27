@@ -8,7 +8,6 @@ class Hashmap {
   constructor(size) {
     this.size = size;
     this.map = new Array(size);
-    // this.map = new Object(size);
   }
 
   hash(key) {
@@ -23,27 +22,44 @@ class Hashmap {
   add(key, value) {
     let hash = this.hash(key);
     if(! this.map[hash] ) { this.map[hash] = new LL(); }
-    this.map[hash].append({[key]:value});
-    // console.log('hash', hash);
-    // console.log('key', key);
-    // console.log('value', value);
+    this.map[hash].append({
+      key: key,
+      value: value,
+    });
     return hash;
   }
 
   find(key) {
-    // let hash = this.hash(key);
-    // return 
+    let hash = this.hash(key);
+    // console.log('hash', hash);
+    let bucket = this.map[hash];
+    if (bucket === undefined) {
+      return 'There is no value matching the current given key.';
+    }   
+    let current = bucket.head;
+    while(current !== null) {
+      if (current.value.key === key) {
+        return current.value.value;
+      }
+      current = current.next;
+    } 
   }
 
   contains(key) {
     let hash = this.hash(key);
-    console.log('key', key);
-    console.log('hash key', hash);
-    if(this.map.includes(hash)) {
-      return true;
-    } else {
+    console.log('hash', hash);
+    let bucket = this.map[hash];
+    console.log('bucket contains key', bucket);
+    if (bucket === undefined) {
       return false;
     }
+    let current = bucket.head;
+    while(current !== null) {
+      if (current.value.key === key) {
+        return true;
+      }
+      current = current.next;
+    } 
   }
 }
 

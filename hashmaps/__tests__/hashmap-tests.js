@@ -28,9 +28,24 @@ describe('Hashmap Data Structure', () => {
     expect(addTest).toEqual(14);
   });
 
-  xit('If it finds a specific key, it will return true', ()=> {
-    let keyTest = myhash.has('Cat');
-    console.log('keytest', keyTest);
+  it('able to return the value when given a key', ()=> {
+    let findTest = myhash.find('Jen');
+    expect(findTest).toEqual('Student');
+  });
+
+  it('will let you know if there is not a matching key/value pair', ()=> {
+    let findTest = myhash.find('Tucket');
+    expect(findTest).toEqual('There is no value matching the current given key.');
+  });
+
+  it('If it finds a specific key, it will return true', ()=> {
+    let keyTest = myhash.contains('Cat');
     expect(keyTest).toEqual(true);
   });
+
+  it('If it finds that a specific key does not exist in the map, it will return false', ()=> {
+    let keyTest = myhash.contains('Kaitlyn');
+    expect(keyTest).toEqual(false);
+  });
+
 });
