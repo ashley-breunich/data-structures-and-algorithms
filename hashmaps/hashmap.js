@@ -8,6 +8,7 @@ class Hashmap {
   constructor(size) {
     this.size = size;
     this.map = new Array(size);
+    // this.map = new Object(size);
   }
 
   hash(key) {
@@ -19,47 +20,48 @@ class Hashmap {
     return idx;  
   }
 
-  set(key, value) {
+  add(key, value) {
     let hash = this.hash(key);
     if(! this.map[hash] ) { this.map[hash] = new LL(); }
     this.map[hash].append({[key]:value});
+    // console.log('hash', hash);
+    // console.log('key', key);
+    // console.log('value', value);
+    return hash;
   }
 
-  has(key) {
+  find(key) {
+    // let hash = this.hash(key);
+    // return 
+  }
+
+  contains(key) {
     let hash = this.hash(key);
     console.log('key', key);
-    if(this.map.includes(key)) {
+    console.log('hash key', hash);
+    if(this.map.includes(hash)) {
       return true;
     } else {
       return false;
     }
   }
-
-  find(key) {
-    // returns value
-  }
-
-  update(key,value) {
-    // find, delete, add
-  }
-
 }
 
 let myhash = new Hashmap(20);
 
-myhash.set('John','Boss');
-myhash.set('Cathy','The Real Boss');
-myhash.set('Zach','Kid 1');
-myhash.set('Allie','Kid 2');
-myhash.set('Rosie','Dog');
-myhash.set('Cat','TA');
-myhash.set('Justin','Student');
-myhash.set('Jason','Student');
-myhash.set('Ben','Student');
-myhash.set('Timea','Student');
-myhash.set('Jen','Student');
-myhash.set('Khalil','Student');
-myhash.set('Michael','Student');
-myhash.set('Ovi','Student');
+myhash.add('John','Boss');
+myhash.add('Cathy','The Real Boss');
+myhash.add('Zach','Kid 1');
+myhash.add('Allie','Kid 2');
+myhash.add('Rosie','Dog');
+myhash.add('Cat','TA');
+myhash.add('Justin','Student');
+myhash.add('Jason','Student');
+myhash.add('Ben','Student');
+myhash.add('Timea','Student');
+myhash.add('Jen','Student');
+myhash.add('Khalil','Student');
+myhash.add('Michael','Student');
+myhash.add('Ovi','Student');
 
 module.exports = Hashmap;
