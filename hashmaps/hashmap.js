@@ -1,6 +1,6 @@
 'use strict';
 
-const util = require('util');
+// const util = require('util');
 const LL = require('./linked-list.js');
 
 class Hashmap {
@@ -8,7 +8,6 @@ class Hashmap {
   constructor(size) {
     this.size = size;
     this.map = new Array(size);
-    // this.map = new Object(size);
   }
 
   hash(key) {
@@ -23,27 +22,60 @@ class Hashmap {
   add(key, value) {
     let hash = this.hash(key);
     if(! this.map[hash] ) { this.map[hash] = new LL(); }
-    this.map[hash].append({[key]:value});
-    // console.log('hash', hash);
-    // console.log('key', key);
-    // console.log('value', value);
+    this.map[hash].append({
+      key: key,
+      value: value,
+    });
     return hash;
   }
 
   find(key) {
-    // let hash = this.hash(key);
-    // return 
+    let hash = this.hash(key);
+    let bucket = this.map[hash];
+    if (bucket === undefined) {
+      return 'There is no value matching the current given key.';
+    }   
+    let current = bucket.head;
+    while(current !== null) {
+      if (current.value.key === key) {
+        return current.value.value;
+      }
+      current = current.next;
+    } 
+    return 'There is no value matching the current given key.';
   }
 
   contains(key) {
     let hash = this.hash(key);
-    console.log('key', key);
-    console.log('hash key', hash);
-    if(this.map.includes(hash)) {
-      return true;
-    } else {
+    let bucket = this.map[hash];
+    if (bucket === undefined) {
       return false;
     }
+    let current = bucket.head;
+    while(current !== null) {
+      if (current.value.key === key) {
+        return true;
+      }
+      current = current.next;
+    } 
+    return false;
+  }
+
+  getHash(key) {
+    let hash = this.hash(key);
+    let bucket = this.map[hash];
+    if (bucket === undefined) {
+      return 'There is no matching key in the map';
+    }
+
+    let current = bucket.head;
+    while (current !== null) {
+      if (current.value.key === key) {
+        return hash;
+      }
+      current = current.next;
+    }
+    return 'There is no matching key in the map';
   }
 }
 
